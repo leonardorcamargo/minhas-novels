@@ -74,7 +74,7 @@
             <div class="panel">
               <p class="panel-heading">Gêneros</p>
 
-              <div class="panel-block" v-for="genre in genres" :key="genre.id">
+              <div class="genre" v-for="genre in genres" :key="genre.id">
                 <span>{{ genre.name }}</span>
                 <b-tag class="is-pulled-right">{{ genre.count }}</b-tag>
               </div>
@@ -140,8 +140,21 @@ export default {
   opacity: .2;
 };
 
-.panel-body {
+.genre {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #363636;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  padding: 0.5em 0.75em;
 }
 </style>
 
